@@ -108,48 +108,6 @@ function getParameterByName(name, url) {
 
 
 
-var animation = lottie.loadAnimation({
-  container: document.getElementById('animation_container'), // 容器的 DOM 元素
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  path: 'assets/guide.json' // JSON 文件的路径
-});
 
-
-var mySwiper = new Swiper('.swiper', {
-  // direction: '', // 垂直切换选项
-  loop: true, // 循环模式选项
-  autoplay: true,//可选选项，自动滑动
-  slidesPerView: 'auto',
-  // width: '200',
-
-  // 如果需要分页器
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // 如果需要前进后退按钮
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // 如果需要滚动条
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-
-  breakpoints: {
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 10
-    },
-    480: {
-      slidesPerView: 2,
-      spaceBetween: 10
-    }
-  }
-})
 
 
