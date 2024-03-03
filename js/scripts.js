@@ -57,6 +57,8 @@ function log(inaction) {
   console.log(channelId);
 
   let action = inaction;
+  var referer = document.referrer;
+var domain = window.location.hostname;
 
 
   var xhr = new XMLHttpRequest();
@@ -65,6 +67,8 @@ function log(inaction) {
   var formData = new FormData();
   formData.append('channelId', channelId);
   formData.append('action', inaction);
+  formData.append('referer', referer);
+  formData.append('domain', domain);
 
 
   xhr.open('POST', 'https://ofdownloader.online/svr/onlyfans/downloader/market/log', true);
@@ -107,6 +111,7 @@ function changeLan(lan) {
  console.log("change lan")
 
 var currentPageURL = window.location.href;
+
 
 
 var pathSegments = currentPageURL.split('/');
