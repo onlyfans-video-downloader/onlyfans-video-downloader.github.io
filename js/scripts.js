@@ -58,7 +58,7 @@ function log(inaction) {
 
   let action = inaction;
   var referer = document.referrer;
-var domain = window.location.hostname;
+  var domain = window.location.hostname;
 
 
   var xhr = new XMLHttpRequest();
@@ -79,12 +79,12 @@ var domain = window.location.hostname;
       console.log(xhr.responseText);
     } else {
 
-      console.error('请求失败：' + xhr.status);
+      console.error('fail：' + xhr.status);
     }
   };
 
   xhr.onerror = function () {
-    console.error('请求出错');
+    console.error('fail');
   };
 
   xhr.send(formData);
@@ -108,29 +108,66 @@ let languages = new Array("Enlish", "français", "español", "italiano");
 
 function changeLan(lan) {
   //navigate to the lan page
- console.log("change lan")
+  console.log("change lan")
 
-var currentPageURL = window.location.href;
+  var currentPageURL = window.location.href;
 
 
 
-var pathSegments = currentPageURL.split('/');
+  var pathSegments = currentPageURL.split('/');
 
-console.log(pathSegments[3])
-var newURL ="";
-if(pathSegments.length<=4)
-{
-  pathSegments[3]=lan+"/index.html"
+  console.log(pathSegments[3])
+  var newURL = "";
+  if (pathSegments.length <= 4) {
+    pathSegments[3] = lan + "/index.html"
+  }
+  else {
+    pathSegments[3] = lan;
+  }
+  newURL = pathSegments.join('/');
+
+  console.log(newURL)
+  // window.location.href=newURL;
+
 }
-else
-{
-  pathSegments[3] = lan;
-}
-newURL = pathSegments.join('/');
 
-console.log(newURL)
-// window.location.href=newURL;
+function subscribeEmail() {
+  var email = document.getElementById("subscribe-email").value;
+  // console.log("email:"+email)
+  var flag = validator.isEmail(email); //=> true
+  var domain = window.location.hostname;
+  var channelId = getParameterByName('channelId');
 
+  if (flag) {
+    var xhr = new XMLHttpRequest();
+
+    var formData = new FormData();
+    formData.append('email', email);
+    formData.append('domain', domain);
+    formData.append('channelId', channelId);
+
+    xhr.open('POST', 'https://ofdownloader.online/svr/onlyfans/downloader/market/saveEmail', true);
+
+    xhr.onload = function () {
+      if (xhr.status >= 200 && xhr.status < 300) {
+
+        console.log(xhr.responseText);
+      } else {
+
+        console.error('fail：' + xhr.status);
+      }
+    };
+
+    xhr.onerror = function () {
+      console.error('fail');
+    };
+
+    xhr.send(formData);
+
+    document.getElementById("emailform").style.display = "none";
+    document.getElementById("successFlag").style.display = "block";
+    
+  }
 }
 
 

@@ -852,6 +852,7 @@ blockquote {
   color: var(--p-color);
   font-size: var(--btn-font-size);
   line-height: 40px;
+  background-color: #ECF5FF;
 }
 
 /*---------------------------------------
@@ -1330,4 +1331,9 @@ li>p.text-white
     height: 11rem;
     margin: 1rem 0;
   }
+}
+
+.successFlag
+{
+  font-size: 23px;
 }
