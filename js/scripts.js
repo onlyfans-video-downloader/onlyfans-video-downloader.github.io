@@ -9,14 +9,14 @@ function goDownloadEXT() {
 
 
 
-  var fileUrl = "assets/OfDFloder.rar";
+  var fileUrl = "assets/OnlyfansVideoDownloader.zip";
 
 
   var link = document.createElement("a");
   link.href = fileUrl;
 
 
-  link.download = "OfDFloder.rar";
+  link.download = "OnlyfansVideoDownloader.zip";
 
 
   document.body.appendChild(link);
@@ -166,9 +166,25 @@ function subscribeEmail() {
 
     document.getElementById("emailform").style.display = "none";
     document.getElementById("successFlag").style.display = "block";
-    
+
   }
 }
 
+
+function showStep(element) {
+  element.style.display = 'none';
+  // console.log(document.getElementsByClassName("guideimgdiv"))
+  var eles = document.getElementsByClassName("guideimgdiv");
+  for (var i = 0; i < eles.length; i++) {
+    eles[i].style.display = "block";
+  }
+
+  
+  var details = document.getElementsByClassName("detaildiv");
+  for (var i = 0; i < details.length; i++) {
+    details[i].style.display = "none";
+  }
+
+}
 
 

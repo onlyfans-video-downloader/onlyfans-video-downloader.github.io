@@ -1337,3 +1337,8 @@ li>p.text-white
 {
   font-size: 23px;
 }
+
+.guideimgdiv
+{
+  display: none;
+}
