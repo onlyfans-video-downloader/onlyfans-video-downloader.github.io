@@ -10,44 +10,44 @@ https://templatemo.com/tm-590-topic-listing
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color:                  #ffffff;
-  --primary-color:                #13547a;
-  --secondary-color:              #80d0c7;
-  --section-bg-color:             #f0f8ff;
-  --custom-btn-bg-color:          #80d0c7;
-  --custom-btn-bg-hover-color:    #13547a;
-  --dark-color:                   #000000;
-  --p-color:                      #717275;
-  --border-color:                 #7fffd4;
-  --link-hover-color:             #13547a;
+  --white-color: #ffffff;
+  --primary-color: #13547a;
+  --secondary-color: #80d0c7;
+  --section-bg-color: #f0f8ff;
+  --custom-btn-bg-color: #80d0c7;
+  --custom-btn-bg-hover-color: #13547a;
+  --dark-color: #000000;
+  --p-color: #717275;
+  --border-color: #7fffd4;
+  --link-hover-color: #13547a;
 
-  --body-font-family:             'Open Sans', sans-serif;
-  --title-font-family:            'Montserrat', sans-serif;
+  --body-font-family: 'Open Sans', sans-serif;
+  --title-font-family: 'Montserrat', sans-serif;
 
-  --h1-font-size:                 58px;
-  --h2-font-size:                 46px;
-  --h3-font-size:                 32px;
-  --h4-font-size:                 28px;
-  --h5-font-size:                 24px;
-  --h6-font-size:                 22px;
-  --p-font-size:                  1.1rem;
-  --menu-font-size:               14px;
-  --btn-font-size:                18px;
-  --copyright-font-size:          16px;
+  --h1-font-size: 58px;
+  --h2-font-size: 46px;
+  --h3-font-size: 32px;
+  --h4-font-size: 28px;
+  --h5-font-size: 24px;
+  --h6-font-size: 22px;
+  --p-font-size: 1.1rem;
+  --menu-font-size: 14px;
+  --btn-font-size: 18px;
+  --copyright-font-size: 16px;
 
-  --border-radius-large:          100px;
-  --border-radius-medium:         20px;
-  --border-radius-small:          10px;
+  --border-radius-large: 100px;
+  --border-radius-medium: 20px;
+  --border-radius-small: 10px;
 
-  --font-weight-normal:           400;
-  --font-weight-medium:           500;
-  --font-weight-semibold:         600;
-  --font-weight-bold:             700;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 }
 
 body {
   background-color: var(--white-color);
-  font-family: var(--body-font-family); 
+  font-family: var(--body-font-family);
 }
 
 
@@ -69,7 +69,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--title-font-family); 
+  font-family: var(--title-font-family);
   font-weight: var(--font-weight-semibold);
 }
 
@@ -112,7 +112,7 @@ ul li {
   font-weight: var(--font-weight-normal);
 }
 
-a, 
+a,
 button {
   touch-action: manipulation;
   transition: all 0.3s;
@@ -157,7 +157,7 @@ strong {
   opacity: 0.85;
 }
 
-.section-overlay + .container {
+.section-overlay+.container {
   position: relative;
 }
 
@@ -189,9 +189,9 @@ strong {
   margin-right: 20px;
 }
 
-.nav-tabs .nav-item.show .nav-link, 
+.nav-tabs .nav-item.show .nav-link,
 .nav-tabs .nav-link.active,
-.nav-tabs .nav-link:focus, 
+.nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
   border-bottom-color: var(--primary-color);
   color: var(--primary-color);
@@ -313,7 +313,7 @@ strong {
 .navbar-nav .nav-link {
   display: inline-block;
   color: var(--white-color);
-  font-family: var(--title-font-family); 
+  font-family: var(--title-font-family);
   font-size: var(--menu-font-size);
   font-weight: var(--font-weight-medium);
   text-transform: uppercase;
@@ -323,14 +323,14 @@ strong {
   padding-bottom: 15px;
 }
 
-.navbar-nav .nav-link.active, 
+.navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
   color: var(--primary-color);
 }
 
 .navbar .dropdown-menu {
   background: var(--white-color);
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
   border: 0;
   display: inherit;
   opacity: 0;
@@ -356,7 +356,7 @@ strong {
 .navbar .dropdown-item {
   display: inline-block;
   color: var(--p-bg-color);
-  font-family: var(--title-font-family); 
+  font-family: var(--title-font-family);
   font-size: var(--menu-font-size);
   font-weight: var(--font-weight-medium);
   text-transform: uppercase;
@@ -364,9 +364,9 @@ strong {
   position: relative;
 }
 
-.navbar .dropdown-item.active, 
+.navbar .dropdown-item.active,
 .navbar .dropdown-item:active,
-.navbar .dropdown-item:focus, 
+.navbar .dropdown-item:focus,
 .navbar .dropdown-item:hover {
   background: transparent;
   color: var(--primary-color);
@@ -549,7 +549,7 @@ strong {
   transform: translateY(-3px);
 }
 
-.custom-block > a {
+.custom-block>a {
   width: 100%;
 }
 
@@ -577,7 +577,7 @@ strong {
   padding: 0;
 }
 
-.custom-block-overlay > a {
+.custom-block-overlay>a {
   height: 100%;
 }
 
@@ -716,7 +716,8 @@ blockquote {
   border-radius: var(--border-radius-small);
 }
 
-.active>.page-link, .page-link.active {
+.active>.page-link,
+.page-link.active {
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
 }
@@ -853,6 +854,7 @@ blockquote {
   font-size: var(--btn-font-size);
   line-height: 40px;
   background-color: #ECF5FF;
+  font-weight: lighter;
 }
 
 /*---------------------------------------
@@ -946,7 +948,7 @@ blockquote {
 }
 
 .site-footer-title {
-  color: var(--primary-color); 
+  color: var(--primary-color);
 }
 
 .site-footer .dropdown-menu {
@@ -1071,7 +1073,7 @@ blockquote {
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  
+
   .navbar {
     background-color: var(--secondary-color);
   }
@@ -1112,7 +1114,7 @@ blockquote {
     width: auto;
   }
 
-  .custom-block-topics-listing > .d-flex,
+  .custom-block-topics-listing>.d-flex,
   .custom-block-topics-listing-info,
   .custom-block-topics-listing a {
     flex-direction: column;
@@ -1154,36 +1156,36 @@ blockquote {
   }
 }
 
-.nameLogo
-{
+.nameLogo {
   display: inline;
   font-size: 1rem;
   line-height: 1rem;
   vertical-align: middle;
-  color:white;
+  color: white;
 }
 
 
-.headLogo
-{
-  width: 2rem; 
+.headLogo {
+  width: 2rem;
   height: auto;
 }
 
 
-.subInfo
-{
+.subInfo {
   margin-top: 1rem;
   color: beige;
   font-size: 1.2rem;
   text-align: center;
 }
 
-.meetuser-container{
+.meetuser-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 自动填充网格，每列最小300px */
-  gap: 20px; /* 卡片之间的间距 */
-  grid-auto-rows: minmax(100px, auto); /* 设置不规则的行高，最小高度100px，根据内容自动调整 */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* 自动填充网格，每列最小300px */
+  gap: 20px;
+  /* 卡片之间的间距 */
+  grid-auto-rows: minmax(100px, auto);
+  /* 设置不规则的行高，最小高度100px，根据内容自动调整 */
 }
 
 .oneuser {
@@ -1300,45 +1302,110 @@ blockquote {
 }
 
 
-.tryfree:hover
-{
+.tryfree:hover {
   background-color: blueviolet;
-  color: white!important;
+  color: white !important;
 }
 
-.number
-{
+.number {
   height: 40%;
 }
 
-li>p.text-white
-{
-  line-height: 2rem!important;
+li>p.text-white {
+  line-height: 2rem !important;
   margin-bottom: 0px;
 }
 
-.guideImg
-{
+.guideImg {
   height: 500px;
   width: 685px;
   margin: 1rem 0;
 }
 
 @media screen and (max-width: 480px) {
-  .guideImg
-  {
+  .guideImg {
     width: 100%;
     height: auto;
     margin: 1rem 0;
   }
+
+  .card-title {
+    font-size: 32px;
+    font-weight: normal;
+  }
 }
 
-.successFlag
-{
+.successFlag {
   font-size: 23px;
 }
 
-.guideimgdiv
-{
+.guideimgdiv {
   display: none;
+}
+
+.insdiv
+{
+  font-size: var(--h2-font-size);
+}
+
+.card-title {
+  font-size: var(--h3-font-size);
+  font-weight: normal;
+}
+
+.inssig
+{
+  font-size: var(--h4-font-size);
+  font-family: var(--title-font-family);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2;
+}
+
+.meet
+{
+  font-size: var(--h3-font-size);
+  font-family: var(--title-font-family);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2;
+}
+
+.userName
+{
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #000;
+}
+
+.userRource
+{
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+
+.faq
+{
+  font-family: var(--title-font-family);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--h3-font-size);
+}
+
+.touch{
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--title-font-family);
+}
+
+.headof{
+  font-size: var(--h4-font-size);
+  font-family: var(--title-font-family);
+    font-weight: var(--font-weight-semibold);
+}
+
+.reso{
+  color: var(--primary-color);
+  font-size: var(--h6-font-size);
+  font-family: var(--title-font-family);
+    font-weight: var(--font-weight-semibold);
 }
