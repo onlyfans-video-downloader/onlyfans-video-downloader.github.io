@@ -1327,8 +1327,8 @@ li>p.text-white
 @media screen and (max-width: 480px) {
   .guideImg
   {
-    width: 15rem;
-    height: 11rem;
+    width: 100%;
+    height: auto;
     margin: 1rem 0;
   }
 }
