@@ -1317,7 +1317,7 @@ li>p.text-white {
 }
 
 .guideImg {
-  height: 500px;
+  /* height: 500px; */
   width: 685px;
   margin: 1rem 0;
 }
@@ -1339,9 +1339,7 @@ li>p.text-white {
   font-size: 23px;
 }
 
-.guideimgdiv {
-  display: none;
-}
+
 
 .insdiv
 {

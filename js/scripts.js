@@ -5,12 +5,12 @@
 */
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
-function goDownloadEXT() {
+function goDownloadEXT(predir) {
 
 
 
-  var fileUrl = "assets/OnlyfansVideoDownloader.zip";
-
+  var fileUrl = predir+"assets/OnlyfansVideoDownloader.zip";
+console.log("fileUrl:"+fileUrl)
 
   var link = document.createElement("a");
   link.href = fileUrl;
