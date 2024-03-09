@@ -91,7 +91,7 @@ function log(inaction) {
 
 }
 
-log("viewPage")
+// log("viewPage")
 
 function getParameterByName(name, url) {
   if (!url) url = window.location.href;
