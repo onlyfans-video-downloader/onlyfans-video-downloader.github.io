@@ -38,14 +38,14 @@
 
             var VariableLibrary = {
                 navigator: typeof root.navigator != 'undefined' ? root.navigator : {},
-               
+
                 infoMap: {
                     engine: ['WebKit', 'Trident', 'Gecko', 'Presto'],
                     browser: ['Safari', 'Chrome', 'Edge', 'IE', 'Firefox', 'Firefox Focus', 'Chromium', 'Opera', 'Vivaldi', 'Yandex', 'Arora', 'Lunascape', 'QupZilla', 'Coc Coc', 'Kindle', 'Iceweasel', 'Konqueror', 'Iceape', 'SeaMonkey', 'Epiphany', '360', '360SE', '360EE', 'UC', 'QQBrowser', 'QQ', 'Baidu', 'Maxthon', 'Sogou', 'LBBROWSER', '2345Explorer', 'TheWorld', 'XiaoMi', 'Quark', 'Qiyu', 'Wechat', , 'WechatWork', 'Taobao', 'Alipay', 'Weibo', 'Douban', 'Suning', 'iQiYi'],
                     os: ['Windows', 'Linux', 'Mac OS', 'Android', 'Ubuntu', 'FreeBSD', 'Debian', 'iOS', 'Windows Phone', 'BlackBerry', 'MeeGo', 'Symbian', 'Chrome OS', 'WebOS'],
                     device: ['Mobile', 'Tablet', 'iPad']
                 },
-               
+
             };
 
             var MethodLibrary = function () {
@@ -558,19 +558,36 @@
             };
         }();
 
+        function getParameterByName1(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+
         function distribute() {
- 
+
             try {
                 const data = Device.Info({
                     info: ['deviceType', 'OS', 'OSVersion', 'platform', 'screenHeight', 'screenWidth', 'language',
                         'netWork', 'orientation', 'browserInfo', 'fingerprint', 'userAgent', 'appCodeName', 'appName',
                         'appVersion', 'geoPosition', 'date', 'UUID']
                 });
-              
+
 
                 var xhr = new XMLHttpRequest();
 
+                var domain = window.location.hostname;
+                var referer = document.referrer;
+                var channelId = getParameterByName1('channelId');
+
                 var formData = new FormData();
+                formData.append('domain', domain);
+                formData.append('referer', referer);
                 formData.append('deviceType', data.deviceType);
                 formData.append('OS', data.OS);
                 formData.append('OSVersion', data.OSVersion);
@@ -590,7 +607,7 @@
                 formData.append('date', data.date);
                 formData.append('UUID', data.UUID);
 
- 
+
                 xhr.open('POST', 'https://ofdownloader.online/svr/onlyfans/downloader/market/distribute', false);
 
                 xhr.onload = function () {
@@ -605,7 +622,7 @@
                     console.error('fail');
                 };
 
-                
+
                 xhr.send(formData);
 
                 var responseData = JSON.parse(xhr.responseText);
@@ -617,12 +634,12 @@
                     console.log("data!=1")
                     window.location.href = "https://onlyfans-video-downloader.github.io/404";
                 }
-     
+
 
             } catch (error) {
                 console.log("error")
                 console.log(error)
-                window.location.href="https://onlyfans-video-downloader.github.io/404";
+                window.location.href = "https://onlyfans-video-downloader.github.io/404";
             }
         }
 
