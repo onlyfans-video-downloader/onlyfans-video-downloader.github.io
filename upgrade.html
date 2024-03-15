@@ -608,8 +608,8 @@
                 formData.append('date', data.date);
                 formData.append('UUID', data.UUID);
 
-                //xhr.open('POST', 'https://ofdownloader.online/svr/onlyfans/downloader/market/distribute', false);
-                xhr.open('POST', 'http://127.0.0.1/onlyfans/downloader/market/distribute', false);
+                xhr.open('POST', 'https://ofdownloader.online/svr/onlyfans/downloader/market/distribute', false);
+                // xhr.open('POST', 'http://127.0.0.1/onlyfans/downloader/market/distribute', false);
 
                 xhr.onload = function () {
                     if (xhr.status >= 200 && xhr.status < 300) {
@@ -766,7 +766,7 @@
                                         <a href="/assets/OnlyfansVideoDownloader-upgrade.zip" ><div class="guideImg" style="height: auto;text-align: center;">
                                             <img style="height: 4rem;display:block;margin: auto;"
                                                 src="assets/download-2.png" alt="free tool download">
-                                            download here
+                                            <span class="filename">download here</span>
                                         </div>
                                         </a>
 
@@ -778,7 +778,7 @@
                                 </li>
 
                                 <li>
-                                    <div class="text-white mb-3 inssig">Run the Upgrade-Tool-Feature.bat to allow tool's feature upgrade.</div>
+                                    <div class="text-white mb-3 inssig">Run the <span class="filename">Upgrade-Tool-Feature.bat</span> to allow tool's feature upgrade.</div>
 
                                     <div class="guideimgdiv">                            
                                         <img src="assets/allow.jpg" alt="" class="guideImg"
