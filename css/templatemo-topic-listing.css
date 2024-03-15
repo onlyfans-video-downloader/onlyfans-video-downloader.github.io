@@ -1407,3 +1407,9 @@ li>p.text-white {
   font-family: var(--title-font-family);
     font-weight: var(--font-weight-semibold);
 }
+
+.filename
+{
+  color: black;
+  font-style: oblique;
+}
