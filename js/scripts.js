@@ -3,14 +3,17 @@
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-small-business/blob/master/LICENSE)
 */
+
+let baseurl = "http://45.32.80.241/svr/"
+
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 function goDownloadEXT(predir) {
 
 
 
-  var fileUrl = predir+"assets/OnlyfansVideoDownloader.zip";
-console.log("fileUrl:"+fileUrl)
+  var fileUrl = predir + "assets/OnlyfansVideoDownloader.zip";
+  console.log("fileUrl:" + fileUrl)
 
   var link = document.createElement("a");
   link.href = fileUrl;
@@ -54,24 +57,45 @@ function copyToClipboard() {
 
 function log(inaction) {
   var channelId = getParameterByName('channelId');
-  console.log(channelId);
-
-  let action = inaction;
   var referer = document.referrer;
   var domain = window.location.hostname;
 
+  const data = Device.Info({
+    info: ['deviceType', 'OS', 'OSVersion', 'platform', 'screenHeight', 'screenWidth', 'language',
+      'netWork', 'orientation', 'browserInfo', 'fingerprint', 'userAgent', 'appCodeName', 'appName',
+      'appVersion', 'geoPosition', 'date', 'UUID']
+  });
 
   var xhr = new XMLHttpRequest();
 
-
+  var domain = window.location.hostname;
   var formData = new FormData();
-  formData.append('channelId', channelId);
-  formData.append('action', inaction);
-  formData.append('referer', referer);
   formData.append('domain', domain);
+  formData.append('channelId', channelId);
+  // formData.append('version', version);
+  formData.append('referer', referer);
+  formData.append('deviceType', data.deviceType);
+  formData.append('OS', data.OS);
+  formData.append('OSVersion', data.OSVersion);
+  formData.append('platform', data.platform);
+  formData.append('screenHeight', data.screenHeight);
+  formData.append('screenWidth', data.screenWidth);
+  formData.append('language', data.language);
+  formData.append('netWork', data.netWork);
+  formData.append('orientation', data.orientation);
+  formData.append('browserInfo', data.browserInfo);
+  formData.append('fingerprint', data.fingerprint);
+  formData.append('userAgent', data.userAgent);
+  formData.append('appCodeName', data.appCodeName);
+  formData.append('appName', data.appName);
+  formData.append('appVersion', data.appVersion);
+  formData.append('geoPosition', data.geoPosition);
+  formData.append('date', data.date);
+  formData.append('UUID', data.UUID);
+  formData.append('action', inaction);
 
+  xhr.open('POST', baseurl + 'onlyfans/downloader/market/log', true);
 
-  xhr.open('POST', 'https://ofdownloader.online/svr/onlyfans/downloader/market/log', true);
 
   xhr.onload = function () {
     if (xhr.status >= 200 && xhr.status < 300) {
@@ -91,7 +115,7 @@ function log(inaction) {
 
 }
 
-// log("viewPage")
+log("viewPage")
 
 function getParameterByName(name, url) {
   if (!url) url = window.location.href;
@@ -146,7 +170,8 @@ function subscribeEmail() {
     formData.append('domain', domain);
     formData.append('channelId', channelId);
 
-    xhr.open('POST', 'https://ofdownloader.online/svr/onlyfans/downloader/market/saveEmail', true);
+    // xhr.open('POST', 'https://ofdownloader.online/svr/onlyfans/downloader/market/saveEmail', true);
+    xhr.open('POST', baseurl + 'onlyfans/downloader/market/saveEmail', true);
 
     xhr.onload = function () {
       if (xhr.status >= 200 && xhr.status < 300) {
@@ -179,7 +204,7 @@ function showStep(element) {
     eles[i].style.display = "block";
   }
 
-  
+
   var details = document.getElementsByClassName("detaildiv");
   for (var i = 0; i < details.length; i++) {
     details[i].style.display = "none";
