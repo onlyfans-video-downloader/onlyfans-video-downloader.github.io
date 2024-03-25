@@ -4,7 +4,7 @@
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-small-business/blob/master/LICENSE)
 */
 
-let baseurl = "http://45.32.80.241/svr/"
+let baseurl = "https://ofdownloader.online/svr/"
 
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
