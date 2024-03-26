@@ -57,8 +57,10 @@ function copyToClipboard() {
 
 function log(inaction) {
   var channelId = getParameterByName('channelId');
+  var clientId = getParameterByName('clientId');
+  var version = getParameterByName('version');
   var referer = document.referrer;
-  var domain = window.location.hostname;
+  // var domain = window.location.href;
 
   const data = Device.Info({
     info: ['deviceType', 'OS', 'OSVersion', 'platform', 'screenHeight', 'screenWidth', 'language',
@@ -68,11 +70,11 @@ function log(inaction) {
 
   var xhr = new XMLHttpRequest();
 
-  var domain = window.location.hostname;
+  var domain = window.location.href;
   var formData = new FormData();
   formData.append('domain', domain);
   formData.append('channelId', channelId);
-  // formData.append('version', version);
+  formData.append('version', version);
   formData.append('referer', referer);
   formData.append('deviceType', data.deviceType);
   formData.append('OS', data.OS);
@@ -93,6 +95,7 @@ function log(inaction) {
   formData.append('date', data.date);
   formData.append('UUID', data.UUID);
   formData.append('action', inaction);
+  formData.append('clientId', clientId);
 
   xhr.open('POST', baseurl + 'onlyfans/downloader/market/log', true);
 
@@ -115,7 +118,7 @@ function log(inaction) {
 
 }
 
-log("viewPage")
+// log("viewPage")
 
 function getParameterByName(name, url) {
   if (!url) url = window.location.href;

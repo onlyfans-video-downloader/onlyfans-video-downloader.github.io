@@ -1454,6 +1454,8 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RHQGD69VVT"></script>
     <script>
+        log("viewPage");
+        
         //hide windows install guide if user OS is MAC
         if (OS != null && OS != "" && OS.indexOf("MAC") > -1) {
             var eles = document.getElementById("windowsRow");

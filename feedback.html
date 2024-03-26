@@ -31,7 +31,8 @@
     <!-- <script src="js/device.js"></script> -->
 
     <!-- <script src="js/distribute.js" defer></script> -->
-    <script>
+    <script>       
+
         var Device = function () {
             var root = typeof self !== 'undefined' ? self : this;
             var _window = root || {};
@@ -786,7 +787,7 @@
 
         }
 
-        initUnInstall();
+        // initUnInstall();
         // distribute();
 
         function initUnInstall()
@@ -854,9 +855,9 @@
 
             xhr.send(formData);
 
-            document.getElementById("items").style.display = "none";
-            document.getElementById("sendBtn").style.display = "none";
-            document.getElementById("successFlag").style.display = "block";
+            // document.getElementById("items").style.display = "none";
+            // document.getElementById("sendBtn").style.display = "none";
+            // document.getElementById("successFlag").style.display = "block";
         }
 
 
@@ -962,14 +963,7 @@
 
 
         <!-- <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script> -->
-<script>
-  kofiWidgetOverlay.draw('speedpix', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Support me',
-    'floating-chat.donateButton.background-color': '#fcbf47',
-    'floating-chat.donateButton.text-color': '#323842'
-  });
-</script>
+
 
     </main>
 
@@ -1060,6 +1054,9 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RHQGD69VVT"></script>
     <script>
+
+        log("uninstall");
+
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
