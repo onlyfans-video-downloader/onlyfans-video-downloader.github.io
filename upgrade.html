@@ -587,7 +587,7 @@
 
                 var xhr = new XMLHttpRequest();
 
-                var domain = window.location.hostname;
+                var domain = window.location.href;
                 var referer = document.referrer;
                 var channelId = getParameterByName1('channelId');
                 var version = getParameterByName1('version');
@@ -1455,7 +1455,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RHQGD69VVT"></script>
     <script>
         log("viewPage");
-        
+
         //hide windows install guide if user OS is MAC
         if (OS != null && OS != "" && OS.indexOf("MAC") > -1) {
             var eles = document.getElementById("windowsRow");

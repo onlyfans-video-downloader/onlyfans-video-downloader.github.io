@@ -162,7 +162,7 @@ function subscribeEmail() {
   var email = document.getElementById("subscribe-email").value;
   // console.log("email:"+email)
   var flag = validator.isEmail(email); //=> true
-  var domain = window.location.hostname;
+  var domain = window.location.href;
   var channelId = getParameterByName('channelId');
 
   if (flag) {
