@@ -8,18 +8,18 @@ let baseurl = "https://ofdownloader.online/svr/"
 
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
-function goDownloadEXT(predir) {
+function goDownloadEXT(osversion) {
 
 
 
-  var fileUrl = predir + "assets/OnlyfansVideoDownloader.zip";
+  var fileUrl = "assets/OnlyfansVideoDownloader-"+osversion+".zip";
   console.log("fileUrl:" + fileUrl)
 
   var link = document.createElement("a");
   link.href = fileUrl;
 
 
-  link.download = "OnlyfansVideoDownloader.zip";
+  link.download = "OnlyfansVideoDownloader-"+osversion+".zip";
 
 
   document.body.appendChild(link);
